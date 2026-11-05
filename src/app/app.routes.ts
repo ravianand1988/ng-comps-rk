@@ -1,3 +1,19 @@
-import { Routes } from '@angular/router';
+import { Route, Routes } from '@angular/router';
 
-export const routes: Routes = [];
+/**
+ * One entry per showcased component. The sidebar is generated from this list,
+ * so adding a component here is all that's needed to make it navigable.
+ */
+export const componentRoutes = [
+  {
+    path: 'counter',
+    title: 'Counter',
+    loadComponent: () => import('./shared/ui/counter/counter').then((m) => m.Counter),
+  },
+] satisfies (Route & { path: string; title: string })[];
+
+export const routes: Routes = [
+  { path: '', redirectTo: componentRoutes[0].path, pathMatch: 'full' },
+  ...componentRoutes,
+  { path: '**', redirectTo: '' },
+];

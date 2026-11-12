@@ -1,0 +1,23 @@
+{{ hoverRating() }}
+
+<div class="stars-wrapper" (mouseleave)="setHoverRating(0)">
+  @for (item of [].constructor(stars()); track $index) {
+    <button
+      class="btn-star"
+      type="button"
+      role="radio"
+      [aria-readonly]="disabled()"
+      [aria-label]="`${rating()} Star${rating() > 1 ? 's' : ''}`"
+      [class]="$index < rating() ? 'btn-star--rated' : 'btn-star--not-rated'"
+      [class.btn-star--prev-hover]="$index < hoverRating() && !disabled()"
+      [disabled]="disabled()"
+      (mouseenter)="setHoverRating($index + 1)"
+      (click)="setRating($index)"
+    >
+      <span class="star">
+        {{ star }}
+      </span>
+    </button>
+  }
+</div>
+<p class="stars-rated">{{ rating() }} out of {{ stars() }}</p>

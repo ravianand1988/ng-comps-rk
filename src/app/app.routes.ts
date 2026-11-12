@@ -16,6 +16,11 @@ export const componentRoutes = [
     loadComponent: () =>
       import('./examples/accordion-example/accordion-example').then((m) => m.AccordionExample),
   },
+  {
+    path: 'start-rating',
+    title: 'Star Ratings',
+    loadComponent: () => import('./examples/index').then((m) => m.StarRatingExample),
+  },
 ] satisfies (Route & { path: string; title: string })[];
 
 export const routes: Routes = [

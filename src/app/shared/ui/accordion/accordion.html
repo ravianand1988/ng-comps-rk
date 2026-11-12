@@ -1,0 +1,12 @@
+@let item = data();
+
+@if (item) {
+  <details class="accordion" (click)="onToggle($event)">
+    <summary>{{ item.title }}</summary>
+    <section class="accordion__content">
+      <p>
+        {{ item.text }}
+      </p>
+    </section>
+  </details>
+}

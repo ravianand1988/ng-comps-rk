@@ -10,6 +10,12 @@ export const componentRoutes = [
     title: 'Counter',
     loadComponent: () => import('./shared/ui/counter/counter').then((m) => m.Counter),
   },
+  {
+    path: 'accordions',
+    title: 'Accordions',
+    loadComponent: () =>
+      import('./examples/accordion-example/accordion-example').then((m) => m.AccordionExample),
+  },
 ] satisfies (Route & { path: string; title: string })[];
 
 export const routes: Routes = [

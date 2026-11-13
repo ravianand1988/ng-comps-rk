@@ -1,0 +1,17 @@
+@for (tab of tabs(); track tab.key; let i = $index) {
+  <button
+    #tabButton
+    type="button"
+    role="tab"
+    class="tab"
+    [id]="'tab-' + tab.key"
+    [attr.aria-controls]="'panel-' + tab.key"
+    [ariaSelected]="tab.key === activeKey()"
+    [tabIndex]="tab.key === focusableKey() ? 0 : -1"
+    [disabled]="tab.disabled || false"
+    [class.tab--active]="tab.key === activeKey()"
+    (click)="select(tab)"
+  >
+    {{ tab.title }}
+  </button>
+}

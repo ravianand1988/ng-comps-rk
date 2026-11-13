@@ -1,0 +1,21 @@
+.tab {
+  padding: 0.5rem 1rem;
+  border-bottom: 0;
+  background-color: #fff;
+
+  &:not(:disabled):hover {
+    cursor: pointer;
+    background-color: #eee;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &--active {
+    border-bottom: solid 3px #2563eb;
+    outline-offset: 3px;
+    background-color: #e8effd;
+  }
+}

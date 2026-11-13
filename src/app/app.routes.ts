@@ -8,7 +8,27 @@ export const componentRoutes = [
   {
     path: 'counter',
     title: 'Counter',
-    loadComponent: () => import('./shared/ui/counter/counter').then((m) => m.Counter),
+    loadComponent: () =>
+      import('./shared/ui/counter/counter').then((m) => m.Counter),
+  },
+  {
+    path: 'accordions',
+    title: 'Accordions',
+    loadComponent: () =>
+      import('./examples/accordion-example/accordion-example').then(
+        (m) => m.AccordionExample,
+      ),
+  },
+  {
+    path: 'start-rating',
+    title: 'Star Ratings',
+    loadComponent: () =>
+      import('./examples/index').then((m) => m.StarRatingExample),
+  },
+  {
+    path: 'tabs',
+    title: 'Tabs',
+    loadComponent: () => import('./examples/index').then((m) => m.TabsExample),
   },
   {
     path: 'accordions',

@@ -1,0 +1,94 @@
+<h3>Tabs example works!</h3>
+<app-tabs [tabs]="tabs" [(activeKey)]="activeTab"></app-tabs>
+
+@switch (activeTab()) {
+  @case ('angular') {
+    <div
+      class="tab-content"
+      role="tabpanel"
+      [id]="'panel-' + activeTab()"
+      [aria-labelledby]="'tab-' + activeTab()"
+    >
+      <h3>Angular 22 is out</h3>
+      <ul>
+        <li>
+          <strong>Stabilized APIs: </strong>Signal forms, Async Signals, and
+          Angular Aria is now stable, offering a production ready foundation.
+        </li>
+        <li>
+          <strong> Template enhancements: </strong>
+          New template features streamline development, improve ergonomics, and
+          enhance code clarity.
+        </li>
+        <li>
+          <strong>API improvements: </strong>
+          Core APIs have been updated for better performance, simpler syntax,
+          and more robust typing.
+        </li>
+        <li>
+          <strong>Angular AI integration:</strong>
+          Streamlined support and updates for AI-driven development workflows.
+        </li>
+      </ul>
+    </div>
+  }
+  @case ('react') {
+    <div
+      class="tab-content"
+      role="tabpanel"
+      [id]="'panel-' + activeTab()"
+      [aria-labelledby]="'tab-' + activeTab()"
+    >
+      <h3>React 19 is out</h3>
+      <ul>
+        <li>
+          <strong>Create user interfaces from components: </strong>
+          React lets you build user interfaces out of individual pieces called
+          components. Create your own React components like Thumbnail,
+          LikeButton, and Video. Then combine them into entire screens, pages,
+          and apps.
+        </li>
+        <li>
+          <strong> Write components with code and markup: </strong>
+          React components are JavaScript functions. Want to show some content
+          conditionally? Use an if statement. Displaying a list? Try array
+          map(). Learning React is learning programming.
+        </li>
+        <li>
+          <strong>Add interactivity wherever you need it: </strong>
+          React components receive data and return what should appear on the
+          screen. You can pass them new data in response to an interaction, like
+          when the user types into an input. React will then update the screen
+          to match the new data.
+        </li>
+      </ul>
+    </div>
+  }
+  @case ('vue') {
+    <div
+      class="tab-content"
+      role="tabpanel"
+      [id]="'panel-' + activeTab()"
+      [aria-labelledby]="'tab-' + activeTab()"
+    >
+      <h3>Vue 3</h3>
+      <ul>
+        <li>
+          <strong>Versatile </strong>
+          A rich, incrementally adoptable ecosystem that scales between a
+          library and a full-featured framework.
+        </li>
+        <li>
+          <strong>User-friendly: </strong>
+          Builds on top of standard HTML, CSS and JavaScript with intuitive API
+          and world-class documentation.
+        </li>
+        <li>
+          <strong>Efficient: </strong>
+          Truly reactive, compiler-optimized rendering system that rarely
+          requires manual optimization.
+        </li>
+      </ul>
+    </div>
+  }
+}

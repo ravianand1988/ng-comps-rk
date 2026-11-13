@@ -1,0 +1,14 @@
+.tab-content {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: solid 2px #eee;
+  max-width: 500px;
+  max-height: 400px;
+  overflow-y: scroll;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  li {
+    margin-bottom: 1rem;
+  }
+}

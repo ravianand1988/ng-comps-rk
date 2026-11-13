@@ -1,0 +1,4 @@
+<h3>Accordions</h3>
+@for (item of accordionItems(); track $index) {
+  <app-accordion [data]="item" (toggleEvent)="onChange($event)"></app-accordion>
+}

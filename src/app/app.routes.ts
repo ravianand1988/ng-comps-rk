@@ -20,7 +20,7 @@ export const componentRoutes = [
       ),
   },
   {
-    path: 'start-rating',
+    path: 'star-rating',
     title: 'Star Ratings',
     loadComponent: () =>
       import('./examples/index').then((m) => m.StarRatingExample),
@@ -29,23 +29,6 @@ export const componentRoutes = [
     path: 'tabs',
     title: 'Tabs',
     loadComponent: () => import('./examples/index').then((m) => m.TabsExample),
-  },
-  {
-    path: 'accordions',
-    title: 'Accordions',
-    loadComponent: () =>
-      import('./examples/accordion-example/accordion-example').then((m) => m.AccordionExample),
-  },
-  {
-    path: 'accordions',
-    title: 'Accordions',
-    loadComponent: () =>
-      import('./examples/accordion-example/accordion-example').then((m) => m.AccordionExample),
-  },
-  {
-    path: 'start-rating',
-    title: 'Star Ratings',
-    loadComponent: () => import('./examples/index').then((m) => m.StarRatingExample),
   },
 ] satisfies (Route & { path: string; title: string })[];
 

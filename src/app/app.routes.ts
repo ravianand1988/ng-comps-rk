@@ -31,21 +31,10 @@ export const componentRoutes = [
     loadComponent: () => import('./examples/index').then((m) => m.TabsExample),
   },
   {
-    path: 'accordions',
-    title: 'Accordions',
+    path: 'dialog',
+    title: 'Dialog',
     loadComponent: () =>
-      import('./examples/accordion-example/accordion-example').then((m) => m.AccordionExample),
-  },
-  {
-    path: 'accordions',
-    title: 'Accordions',
-    loadComponent: () =>
-      import('./examples/accordion-example/accordion-example').then((m) => m.AccordionExample),
-  },
-  {
-    path: 'start-rating',
-    title: 'Star Ratings',
-    loadComponent: () => import('./examples/index').then((m) => m.StarRatingExample),
+      import('./examples/index').then((m) => m.DialogExample),
   },
 ] satisfies (Route & { path: string; title: string })[];
 

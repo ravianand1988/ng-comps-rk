@@ -1,0 +1,41 @@
+.comment {
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 8px;
+  padding:  0 1rem 1rem;
+  margin-bottom: 1rem;
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
+  }
+
+  .comment-text {
+    padding: 0 1.5rem;
+  }
+}
+
+.replies-list {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 1rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+  user-select: none;
+}
+
+.reddit-details {
+  cursor: pointer;
+  user-select: none;
+}
+
+.reddit-details::details-content {
+  transition:
+    max-height 0.1s ease,
+    content-visibility 0.1s allow-discrete;
+}
+
+

@@ -36,6 +36,12 @@ export const componentRoutes = [
     loadComponent: () =>
       import('./examples/index').then((m) => m.DialogExample),
   },
+  {
+    path: 'reddit-thread',
+    title: 'Reddit Thread',
+    loadComponent: () =>
+      import('./examples/index').then((m) => m.RedditThreadExample),
+  },
 ] satisfies (Route & { path: string; title: string })[];
 
 export const routes: Routes = [

@@ -1,0 +1,24 @@
+<p>Dialog examples work!</p>
+<div class="dialog-buttons">
+  <button type="button" (click)="onOpenDialog()">Open Default</button>
+  <button type="button" (click)="onCustomOpenDialog()">Open Custom</button>
+</div>
+
+<app-dialog [(open)]="openDialog" (confirm)="onConfirm($event)"> </app-dialog>
+
+<app-dialog
+  #customDialog
+  [(open)]="openCustomDialog"
+  (confirm)="onConfirm($event)"
+>
+  <div class="dialog-custom">
+    <h3>Heading..</h3>
+    <section class="dialog-content">
+      <p>custom content...</p>
+    </section>
+    <footer>
+      <button type="button" (click)="onCustomClose()">Cancel</button>
+      <button type="button" (click)="onCustomConfirm()">Confirm</button>
+    </footer>
+  </div>
+</app-dialog>

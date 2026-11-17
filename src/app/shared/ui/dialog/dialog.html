@@ -1,0 +1,14 @@
+<dialog #dialogRk (close)="onClose()">
+  <ng-content>
+    <div class="dialog-default">
+      <h3>Hi I am a default dialog header!</h3>
+      <section class="dialog-content">
+        <p>Default Dialog content...</p>
+      </section>
+      <footer class="dialog-footer">
+        <button type="button" (click)="onClose()">Cancel</button>
+        <button type="button" (click)="onConfirm()">Confirm</button>
+      </footer>
+    </div>
+  </ng-content>
+</dialog>

@@ -30,6 +30,12 @@ export const componentRoutes = [
     title: 'Tabs',
     loadComponent: () => import('./examples/index').then((m) => m.TabsExample),
   },
+  {
+    path: 'dialog',
+    title: 'Dialog',
+    loadComponent: () =>
+      import('./examples/index').then((m) => m.DialogExample),
+  },
 ] satisfies (Route & { path: string; title: string })[];
 
 export const routes: Routes = [

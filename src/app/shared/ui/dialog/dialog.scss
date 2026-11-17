@@ -1,0 +1,32 @@
+dialog {
+  padding: 0;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.dialog-default {
+  padding: 0;
+  width: 400px;
+
+  h3 {
+    padding: 0.5rem 1rem;
+  }
+
+  .dialog-content {
+    padding: 0 2rem;
+  }
+
+  footer {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: flex-end;
+
+    button {
+      padding: 0.5rem;
+      border-radius: 8px;
+    }
+  }
+}

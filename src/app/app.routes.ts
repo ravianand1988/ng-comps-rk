@@ -20,7 +20,7 @@ export const componentRoutes = [
       ),
   },
   {
-    path: 'start-rating',
+    path: 'star-rating',
     title: 'Star Ratings',
     loadComponent: () =>
       import('./examples/index').then((m) => m.StarRatingExample),
